@@ -1,0 +1,301 @@
+:root {
+  --brand-light: #d1fae5;
+  --brand: #10b981;
+  --brand-dark: #059669;
+  --brand-darker: #047857;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #333;
+  padding-top: 76px;
+  background: linear-gradient(120deg, #f0fdf4, #d1fae5);
+}
+
+.font-display {
+  font-family: "Fredoka", sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: var(--brand-darker);
+}
+.navbar-brand {
+  color: #fff !important;
+  font-size: 1.8rem;
+}
+.nav-link {
+  color: #e0e0e0 !important;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--brand-light) !important;
+}
+.quiz-link {
+  background-color: var(--brand);
+  border-radius: 20px;
+  padding: 8px 16px !important;
+  color: white !important;
+  margin-left: 10px;
+}
+
+/* Sections */
+section {
+  padding: 80px 0;
+}
+.section-title {
+  color: var(--brand-darker);
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+.section-subtitle {
+  color: var(--brand-dark);
+  font-size: 2.5rem;
+}
+
+#about {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 40px 40px 0 0;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* 3D Button */
+.btn-3d {
+  transition: all 0.15s ease;
+}
+.btn-3d:active {
+  transform: translateY(4px);
+  border-bottom-width: 2px !important;
+}
+.btn-primary-custom {
+  background-color: var(--brand);
+  color: white;
+  border: none;
+  border-bottom: 6px solid var(--brand-darker);
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+}
+.btn-primary-custom:hover {
+  background-color: var(--brand-dark);
+  color: white;
+}
+
+/* --- Engaging Hero Section Enhancements --- */
+.hero-section {
+  padding-bottom: 60px;
+}
+.hero-text-box {
+  animation: fadeInText 0.8s ease-out forwards;
+}
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.hero-carousel-wrapper {
+  position: relative;
+  z-index: 1;
+  animation: fadeInImage 1s ease-out forwards;
+}
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Clean, Responsive Image Carousels --- */
+#bsfCarousel,
+#aboutCarousel {
+  border: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important; /* Removes the background board/shadow */
+  border-radius: 1rem; /* Slightly rounded corners */
+  overflow: hidden;
+  width: 100%;
+}
+
+#bsfCarousel .carousel-item,
+#aboutCarousel .carousel-item {
+  width: 100%;
+  aspect-ratio: 4 / 3; /* Responsive: keeps the shape consistent on all screens */
+  max-height: 450px; /* Prevents it from getting too massive on large monitors */
+}
+
+#bsfCarousel .carousel-item img,
+#aboutCarousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the space without stretching */
+  border-radius: 1rem; /* Applies the rounded corners to the images themselves */
+}
+
+/* Optional: Removes animations related to the old backdrop if you still have them */
+.hero-carousel-wrapper,
+.carousel-backdrop {
+  display: none !important;
+}
+
+/* --- Ultra-Engaging Flip Cards --- */
+.flip-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.flip-card {
+  width: 270px;
+  height: 340px;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.flip-card:hover {
+  transform: translateY(-10px);
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 35px;
+  padding: 30px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.flip-card-front {
+  background: linear-gradient(145deg, #ffffff 0%, #e6f9f0 100%);
+  border: 4px solid white;
+  box-shadow: 0 15px 35px rgba(16, 185, 129, 0.15);
+}
+.flip-card-front h5 {
+  margin-top: 15px;
+  font-size: 1.4rem;
+  color: var(--brand-darker);
+}
+.flip-card-front img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 15px 0;
+  border: 5px solid white;
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.25);
+  transition: transform 0.4s ease;
+}
+.flip-card:hover .flip-card-front img {
+  transform: scale(1.08) rotate(5deg);
+}
+.step-number {
+  background: linear-gradient(135deg, var(--brand), var(--brand-darker));
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.8rem;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid white;
+  box-shadow: 0 8px 15px rgba(4, 120, 87, 0.3);
+  font-family: "Fredoka", sans-serif;
+}
+.click-hint {
+  font-size: 0.9rem;
+  color: white;
+  background-color: var(--brand);
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-top: auto;
+  box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+  animation: bounce-hint 2s infinite;
+}
+@keyframes bounce-hint {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+.flip-card-back {
+  background: linear-gradient(135deg, var(--brand), var(--brand-darker));
+  color: white;
+  transform: rotateY(180deg);
+  border: 4px solid var(--brand-light);
+  box-shadow: 0 15px 35px rgba(4, 120, 87, 0.3);
+  justify-content: center;
+}
+.flip-card-back h5 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.flip-card-back p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+.footer-custom {
+  background-color: var(--brand-darker);
+}
+
+/* --- Full-Width Process Divider --- */
+.custom-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Forces the line to take up the full container */
+  padding: 10px 0 30px 0;
+}
+
+.divider-line {
+  flex-grow: 1;
+  height: 4px;
+  background-color: green; /* Clean white line */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.divider-icon {
+  font-size: 2.2rem;
+  margin: 0 25px;
+  animation: spin-process 5s linear infinite; /* Smooth continuous spin */
+}

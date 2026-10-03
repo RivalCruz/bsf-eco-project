@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BSF Eco-Warrior Quiz</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Cleaned External CSS -->
+    <link href="css/quiz.css" rel="stylesheet" />
+
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Nunito", "sans-serif"],
+              display: ["Fredoka", "sans-serif"],
+            },
+            colors: {
+              brand: {
+                light: "#d1fae5",
+                DEFAULT: "#10b981",
+                dark: "#059669",
+                darker: "#047857",
+              },
+              accent: { DEFAULT: "#f59e0b" },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="min-h-screen flex items-center justify-center p-4 text-gray-800">
+    <a
+      href="index.html"
+      class="fixed top-4 left-4 md:top-6 md:left-6 bg-white text-brand-darker font-display font-semibold py-2 px-4 md:py-2 md:px-5 rounded-full shadow-lg hover:bg-brand-light transform hover:-translate-y-1 transition-all flex items-center gap-2 border-2 border-brand-light z-50"
+    >
+      <span class="text-xl">⬅️</span>
+      <span class="hidden md:inline">Exit to Home</span>
+    </a>
+
+    <div
+      class="w-full max-w-2xl bg-white/95 backdrop-blur-sm rounded-[2.5rem] shadow-2xl overflow-hidden border-4 border-white relative z-10"
+    >
+      <!-- LOADING SCREEN -->
+      <div
+        id="loading-screen"
+        class="p-12 text-center flex flex-col items-center justify-center min-h-[450px]"
+      >
+        <div class="text-5xl mb-4 animate-bounce">🐛</div>
+        <h2 class="text-3xl font-display font-bold text-brand-darker">
+          Loading Quiz...
+        </h2>
+      </div>
+
+      <!-- START SCREEN -->
+      <div
+        id="start-screen"
+        class="hidden p-8 md:p-12 text-center flex flex-col items-center justify-center min-h-[450px]"
+      >
+        <div class="text-7xl mb-6 animate-float">
+          <img src="images/adult_placeholder.png" alt="" />
+        </div>
+        <h1
+          class="text-4xl md:text-5xl font-display font-bold text-brand-darker mb-4"
+        >
+          LET'S PLAY!
+        </h1>
+        <p class="text-lg text-gray-600 mb-8 max-w-md mx-auto font-medium">
+          Test your knowledge about Black Soldier Fly!
+        </p>
+        <button
+          onclick="startQuiz()"
+          class="btn-3d bg-brand text-white font-display text-2xl py-4 px-12 rounded-full border-b-8 border-brand-darker hover:bg-brand-dark"
+        >
+          Start Playing! 🚀
+        </button>
+      </div>
+
+      <!-- QUIZ SCREEN -->
+      <div id="quiz-screen" class="hidden flex flex-col min-h-[550px]">
+        <div
+          class="bg-brand-light/50 p-5 flex justify-between items-center border-b border-brand/20"
+        >
+          <span
+            id="question-tracker"
+            class="font-display font-semibold text-brand-darker text-lg tracking-wide"
+          ></span>
+          <div
+            class="w-1/2 bg-white rounded-full h-4 shadow-inner border border-brand/10"
+          >
+            <div
+              id="progress-bar"
+              class="bg-gradient-to-r from-brand to-emerald-400 h-full rounded-full transition-all duration-500 w-0"
+            ></div>
+          </div>
+        </div>
+        <div class="p-6 md:p-8 flex-grow flex flex-col">
+          <h2
+            id="question-text"
+            class="text-2xl md:text-3xl font-display text-gray-800 mb-6 leading-tight"
+          ></h2>
+          <div id="image-container" class="hidden mb-6 flex justify-center">
+            <img id="question-image" src="" alt="Quiz related image" />
+          </div>
+          <div id="options-container" class="grid grid-cols-1 gap-3 mb-6"></div>
+          <div
+            id="explanation-box"
+            class="hidden mt-auto mb-6 bg-amber-50 border-2 border-accent text-amber-900 p-5 rounded-2xl fade-in"
+          >
+            <div class="flex items-start">
+              <span class="text-3xl mr-3 animate-bounce">💡</span>
+              <div>
+                <h4
+                  class="font-display font-semibold text-lg text-amber-700 mb-1"
+                >
+                  Did you know?
+                </h4>
+                <p id="explanation-text" class="text-base font-medium"></p>
+              </div>
+            </div>
+          </div>
+          <button
+            id="next-btn"
+            onclick="nextQuestion()"
+            class="hidden btn-3d w-full bg-brand text-white font-display text-xl py-4 rounded-2xl border-b-8 border-brand-darker mt-auto fade-in"
+          >
+            Next Question ➡️
+          </button>
+        </div>
+      </div>
+
+      <!-- RESULT SCREEN -->
+      <div
+        id="result-screen"
+        class="hidden p-8 md:p-12 text-center flex flex-col items-center justify-center min-h-[450px]"
+      >
+        <div id="result-icon" class="text-7xl mb-4 animate-float">🏆</div>
+        <h2 class="text-4xl font-display font-bold text-brand-darker mb-2">
+          Quiz Complete!
+        </h2>
+        <div class="text-7xl font-display font-black text-brand mb-6">
+          <span id="final-score">0</span
+          ><span class="text-4xl text-gray-400">/10</span>
+        </div>
+        <p
+          id="result-message"
+          class="text-xl font-medium text-gray-700 mb-10"
+        ></p>
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md mx-auto"
+        >
+          <button
+            onclick="startQuiz()"
+            class="btn-3d w-full sm:w-1/2 bg-brand text-white font-display text-xl py-4 rounded-2xl border-b-8 border-brand-darker"
+          >
+            Try Again 🔄
+          </button>
+          <a
+            href="index.html"
+            class="btn-3d w-full sm:w-1/2 bg-gray-700 text-white font-display text-xl py-4 rounded-2xl border-b-8 border-gray-900 block"
+          >
+            Home 🏠
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- External Quiz Logic -->
+    <script src="js/quiz.js"></script>
+  </body>
+</html>

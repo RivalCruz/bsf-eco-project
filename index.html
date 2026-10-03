@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BSF Eco Project</title>
+
+    <!-- Offline Bootstrap 5 CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Fun Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Cleaned External CSS -->
+    <link href="css/index.css" rel="stylesheet" />
+  </head>
+  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="80">
+    <!-- Responsive Navigation Bar -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand font-display" href="#home">BLACK SOLDIER FLY</a>
+        <button
+          class="navbar-toggler custom-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link font-display" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-display" href="#process">Life Cycle</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-display" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link font-display quiz-link" href="quiz.html"
+                >Play Quiz 🎮</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 1. Modern, Engaging Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Text Side (Left) -->
+          <div
+            class="col-lg-7 text-center text-lg-start mb-5 mb-lg-0 pe-lg-5 hero-text-box"
+          >
+            <!-- <span
+              class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill font-display fs-6 shadow-sm"
+            >
+              🌿 Eco-Friendly Bioconversion
+            </span> -->
+            <h1
+              class="display-4 font-display fw-bold mb-4"
+              style="color: var(--brand-darker); line-height: 1.2"
+            >
+              The Future of <br />
+              <span style="color: var(--brand)">Waste Management ♻️</span>
+            </h1>
+            <p class="lead mb-4 fw-medium" style="font-size: 1.25rem">
+              Meet the Black Soldier Fly (<i>Hermetia illucens</i>) — a
+              harmless, non-pest insect that does not bite or carry diseases.
+              Their larvae act as nature's ultimate recyclers, rapidly
+              converting organic food waste into high-quality protein and
+              nutrient-rich fertilizer!
+            </p>
+            <div
+              class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start mt-4"
+            >
+              <a
+                href="#process"
+                class="btn btn-3d btn-primary-custom font-display fs-5 px-4 py-3 text-decoration-none"
+              >
+                See How It Works 👇
+              </a>
+              <a
+                href="quiz.html"
+                class="btn btn-3d font-display fs-5 px-4 py-3 text-dark text-decoration-none"
+                style="
+                  background-color: #fbd38d;
+                  border: none;
+                  border-bottom: 6px solid #d97706;
+                  border-radius: 50px;
+                "
+              >
+                Play Quiz 🎮
+              </a>
+            </div>
+          </div>
+
+          <!-- Visual Side (Right - The Carousel) -->
+          <div class="col-lg-5">
+            <div
+              id="bsfCarousel"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div
+                class="carousel-indicators"
+                id="carousel-indicators-container"
+              ></div>
+              <div class="carousel-inner" id="carousel-inner-container"></div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#bsfCarousel"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#bsfCarousel"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. The Life Cycle Flip Cards Section -->
+    <section id="process" class="pt-2 pb-5">
+      <div class="container text-center">
+        <!-- Process Section Divider -->
+        <div class="custom-divider mb-2">
+          <div class="divider-line"></div>
+          <!-- <span class="divider-icon">🔄</span> -->
+          <span>
+            <h4 class="font-display section-subtitle mx-2">
+              THE LIFE CYCLE OF BLACK SOLDIER FLY
+            </h4>
+          </span>
+          <div class="divider-line"></div>
+        </div>
+
+        <!-- JavaScript will inject the flip cards here -->
+        <div id="flip-card-container" class="flip-card-container"></div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title font-display text-center">
+          About Our Mission
+        </h2>
+        <div class="row align-items-center mt-5">
+          <div class="col-md-6 mb-4 mb-md-0 text-center">
+            <div
+              id="aboutCarousel"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div
+                class="carousel-indicators"
+                id="about-indicators-container"
+              ></div>
+              <div class="carousel-inner" id="about-inner-container"></div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#aboutCarousel"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#aboutCarousel"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-md-6 about-text px-md-4">
+            <h3 class="font-display text-brand-dark mb-4">
+              Waste Management Leaders
+            </h3>
+            <p class="fs-5">
+              We are a dedicated team operating at the Asian University for
+              Women's (AUW) Black Soldier Fly Research Centre.
+            </p>
+            <p class="fs-5 text-muted">
+              By utilizing insect-based bioconversion, we treat organic waste
+              on-site, eliminating municipal landfill tipping and reducing
+              harmful methane emissions.
+            </p>
+            <!-- <a
+              href="quiz.html"
+              class="btn btn-3d btn-primary-custom font-display mt-3"
+              >Take the Quiz! 🚀</a
+            > -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-custom py-5">
+      <div class="container text-center text-light">
+        <h5 class="font-display fw-bold mb-3">🌿 AUW BSF Project</h5>
+        <p class="small opacity-75 mb-0">
+          &copy; 2026 AUW BSF Research Centre. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+[
+  {
+    "question": "What stage of the Black Soldier Fly life cycle is shown in this image?",
+    "hasImage": true,
+    "imagePath": "images/pupae.png",
+    "options": ["Adult", "Eggs", "Prepupae", "Pupae"],
+    "answer": "Pupae",
+    "explanation": "During the pupal stage, the insect stops eating, turns into a pupa, and waits to emerge as a fly."
+  },
+  {
+    "question": "What are the two valuable outputs produced by Black Soldier Fly bioconversion?",
+    "hasImage": false,
+    "imagePath": "",
+    "options": [
+      "Methane and compost",
+      "Nutrient-rich frass and protein-rich prepupae",
+      "Sawdust and adult flies",
+      "Plastic waste and soil"
+    ],
+    "answer": "Nutrient-rich frass and protein-rich prepupae",
+    "explanation": "BSF composting converts organic food waste into two valuable outputs: nutrient-rich frass (organic fertilizer) and prepupae (protein-rich animal feed)."
+  },
+  {
+    "question": "Approximately how many eggs can an adult female Black Soldier Fly lay after mating?",
+    "hasImage": false,
+    "imagePath": "",
+    "options": [
+      "10 to 50 eggs",
+      "50 to 100 eggs",
+      "200 to 800 eggs",
+      "1000 to 2000 eggs"
+    ],
+    "answer": "200 to 800 eggs",
+    "explanation": "After a mating period of 2-3 days, an adult female can lay about 200 to 800 eggs in moist materials."
+  },
+  {
+    "question": "Which of the following is a key characteristic of the adult insect shown in the image?",
+    "hasImage": true,
+    "imagePath": "images/adult.png",
+    "options": [
+      "They are a major agricultural pest.",
+      "They aggressively bite and sting humans.",
+      "They vector human pathogens.",
+      "They do not bite, sting, or vector human pathogens."
+    ],
+    "answer": "They do not bite, sting, or vector human pathogens.",
+    "explanation": "Adult Black Soldier Flies do not bite, sting, or vector human pathogens, which makes them ideal for institutional facilities."
+  },
+  {
+    "question": "How long does the multiple larval stage typically last while they consume organic waste?",
+    "hasImage": false,
+    "imagePath": "",
+    "options": [
+      "2 to 4 days",
+      "10 to 30 days",
+      "40 to 60 days",
+      "3 to 6 months"
+    ],
+    "answer": "10 to 30 days",
+    "explanation": "The multiple larval stages last between 10 to 30 days. During this time, they consume organic waste with amazing speed."
+  },
+  {
+    "question": "Based on comparative dietary substrate studies, which material supported the fastest substrate consumption and highest average waste reduction?",
+    "hasImage": false,
+    "imagePath": "",
+    "options": ["Wheat bran", "Rice bran", "Maize powder", "Chicken feed"],
+    "answer": "Chicken feed",
+    "explanation": "In the experiment, chicken feed (CF) achieved the highest average reduction at 3.67 kg and appeared to support the fastest substrate consumption and larval activity."
+  },
+  {
+    "question": "What is the approximate protein content of the insects shown in this image after they consume organic waste?",
+    "hasImage": true,
+    "imagePath": "images/larvae.png",
+    "options": ["10% to 20%", "30% to 40%", "40% to 60%", "70% to 80%"],
+    "answer": "40% to 60%",
+    "explanation": "During the multiple larval stages, larvae consume organic waste with amazing speed, converting it into a body mass consisting of 40% to 60% protein and 30% to 40% fats."
+  },
+  {
+    "question": "How long does it take for Black Soldier Fly eggs to hatch once they are laid?",
+    "hasImage": false,
+    "imagePath": "",
+    "options": ["24 hours", "2 to 4 days", "7 to 10 days", "14 to 21 days"],
+    "answer": "2 to 4 days",
+    "explanation": "The eggs hatch rapidly, taking only 2 to 4 days once they are laid in moist materials."
+  },
+  {
+    "question": "Before emerging as an adult fly, how long does the insect remain in the pupae stage?",
+    "hasImage": false,
+    "imagePath": "",
+    "options": ["~2 days", "~7 days", "~10 days", "~30 days"],
+    "answer": "~10 days",
+    "explanation": "The pupal stage lasts approximately 10 days. During this time, the insect stops eating and waits to emerge as a fly."
+  },
+  {
+    "question": "Treating organic waste directly with Black Soldier Flies rather than sending it to municipal dumps helps prevent the emission of which greenhouse gas?",
+    "hasImage": false,
+    "imagePath": "",
+    "options": [
+      "Carbon dioxide (CO2)",
+      "Methane (CH4)",
+      "Nitrous oxide (N2O)",
+      "Ozone (O3)"
+    ],
+    "answer": "Methane (CH4)",
+    "explanation": "Treating organic waste directly on campus to eliminate municipal landfill tipping prevents methane (CH4) emissions in municipal dumps."
+  },
+  {
+    "question": "In a standard treatment process, 1 gram of BSF eggs is expected to yield approximately how much larvae mass from 10 kg of food waste?",
+    "hasImage": false,
+    "imagePath": "",
+    "options": [
+      "100 to 500 grams",
+      "1 to 2 kilograms",
+      "3 to 5 kilograms",
+      "8 to 10 kilograms"
+    ],
+    "answer": "3 to 5 kilograms",
+    "explanation": "It has been proven that mostly 1g of eggs yields 3-5 kg of larvae from 10kg of food waste."
+  },
+  {
+    "question": "Based on comparative dietary studies, which material resulted in the lowest average waste reduction?",
+    "hasImage": false,
+    "imagePath": "",
+    "options": ["Chicken feed", "Maize powder", "Wheat bran", "Rice bran"],
+    "answer": "Rice bran",
+    "explanation": "Rice bran showed the lowest average reduction at 2.02 kg in the experimental findings."
+  },
+  {
+    "question": "What is the scientific name for the non-pest insect used in this bioconversion process?",
+    "hasImage": false,
+    "imagePath": "",
+    "options": [
+      "Musca domestica",
+      "Hermetia illucens",
+      "Drosophila melanogaster",
+      "Apis mellifera"
+    ],
+    "answer": "Hermetia illucens",
+    "explanation": "The biological bioconversion process uses non-pest Hermetia illucens Larvae."
+  },
+  {
+    "question": "What percentage of fats do Black Soldier Fly larvae typically contain after consuming organic waste?",
+    "hasImage": false,
+    "imagePath": "",
+    "options": ["10% to 20%", "30% to 40%", "50% to 60%", "70% to 80%"],
+    "answer": "30% to 40%",
+    "explanation": "Larvae convert organic waste into body mass consisting of 40-60% protein and 30-40% fats."
+  },
+  {
+    "question": "Which two dietary substrates ranked second and third in terms of average waste reduction, respectively?",
+    "hasImage": false,
+    "imagePath": "",
+    "options": [
+      "Maize powder and Wheat bran",
+      "Wheat bran and Rice bran",
+      "Chicken feed and Maize powder",
+      "Rice bran and Chicken feed"
+    ],
+    "answer": "Maize powder and Wheat bran",
+    "explanation": "Maize powder ranked second (2.80 kg reduction) and Wheat bran ranked third (2.36 kg reduction)."
+  }
+]
