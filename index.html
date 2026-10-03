@@ -19,7 +19,13 @@
     <!-- Responsive Navigation Bar -->
     <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
       <div class="container">
-        <a class="navbar-brand font-display" href="#home">BLACK SOLDIER FLY</a>
+        <a class="navbar-brand font-display" href="#home">
+          <!-- Shows only on medium and larger screens (Tablets/Desktops) -->
+          <span class="d-none d-md-inline">BLACK SOLDIER FLY</span>
+
+          <!-- Shows only on small screens (Mobile Phones) -->
+          <span class="d-inline d-md-none">BSF</span>
+        </a>
         <button
           class="navbar-toggler custom-toggler"
           type="button"
